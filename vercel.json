@@ -1,10 +1,6 @@
 {
-  "version": 2,
-  "builds": [
-    { "src": "api/getbatches.js", "use": "@vercel/node" }
-  ],
   "routes": [
-    { "src": "/api/getbatches", "dest": "api/getbatches.js" },
-    { "src": "/", "dest": "index.html" }
+    { "src": "/api/getbatches", "dest": "/api/getbatches.js" },
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
